@@ -1,0 +1,66 @@
+{
+  "name": "transifex-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/transifex-api.min.js",
+  "scripts": {
+    "testmin": "python -m SimpleHTTPServer 9000",
+    "precommit": "npm run coverage && npm run build && git add dist/transifex-api.min.js && git add coverage.txt",
+    "build": "rimraf dist && webpack",
+    "coverage": "rm coverage.txt && rimraf coverage && node_modules/babel-cli/bin/babel-node.js node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report text --report text-summary >> coverage.txt -- -R min",
+    "coverage-html": "rimraf coverage && node_modules/babel-cli/bin/babel-node.js node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report html -- -R min",
+    "test": "npm run test-server && npm run test-browser",
+    "test-server": "mocha  --recursive --bail --require babel-core/register mocha.config.js",
+    "test-browser": "karma start --single-run",
+    "tdd-browser": "karma start",
+    "jsdoc": "node_modules/jsdoc/jsdoc.js -r src/ -d docs --readme readme.md"
+  },
+  "repository": "transifex/transifex-api",
+  "keywords": [],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-core": "^6.4.5",
+    "babel-eslint": "^4.1.4",
+    "babel-loader": "^6.2.2",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.2.0",
+    "coveralls": "^2.11.4",
+    "eslint": "^1.4.1",
+    "eslint-plugin-babel": "^3.1.0",
+    "husky": "^0.10.1",
+    "isparta": "^4.0.0",
+    "jsdoc": "^3.4.0",
+    "karma": "^0.13.14",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-mocha": "^0.2.1",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-spec-reporter": "0.0.23",
+    "karma-webpack": "^1.5.0",
+    "mocha": "^2.3.3",
+    "mocha-lcov-reporter": "^1.0.0",
+    "phantomjs-polyfill": "0.0.1",
+    "phantomjs-prebuilt": "^2.1.3",
+    "rimraf": "^2.4.3",
+    "webpack": "^1.12.2"
+  },
+  "author": {
+    "name": "Alex Psi",
+    "email": "alexpsi256@gmail.com"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "promise": "^7.1.1",
+    "superagent": "^1.8.3",
+    "superagent-prefix": "0.0.2",
+    "superagent-promise": "^1.1.0"
+  }
+}
