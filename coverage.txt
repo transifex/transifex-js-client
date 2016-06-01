@@ -1,29 +1,38 @@
-[2J[1;3H
-  43 passing (4s)
+[2J[1;3H[ { coordinators: [ 'alexapi1' ],
+    language_code: 'en',
+    translators: [],
+    reviewers: [] } ]
 
------------------------|----------|----------|----------|----------|----------------|
-File                   |  % Stmts | % Branch |  % Funcs |  % Lines |Uncovered Lines |
------------------------|----------|----------|----------|----------|----------------|
- src/                  |      100 |      100 |      100 |      100 |                |
-  md5.js               |      100 |      100 |      100 |      100 |                |
-  transifex-api.js     |      100 |      100 |      100 |      100 |                |
-  url.js               |      100 |      100 |      100 |      100 |                |
- src/mixins/           |      100 |      100 |      100 |      100 |                |
-  language.js          |      100 |      100 |      100 |      100 |                |
-  languageInfo.js      |      100 |      100 |      100 |      100 |                |
-  project.js           |      100 |      100 |      100 |      100 |                |
-  resource.js          |      100 |      100 |      100 |      100 |                |
-  resourceString.js    |      100 |      100 |      100 |      100 |                |
-  translation.js       |      100 |      100 |      100 |      100 |                |
-  translationString.js |      100 |      100 |      100 |      100 |                |
------------------------|----------|----------|----------|----------|----------------|
-All files              |      100 |      100 |      100 |      100 |                |
------------------------|----------|----------|----------|----------|----------------|
+  36 passing (41s)
+  7 failing
+
+  1) Language mixin Given that a project named autotest exists:
+     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+  
+
+  2) Language mixin should be able to add the english target language:
+     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+  
+
+  3) Resource mixin should be able to upload a resource to the project:
+     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+  
+
+  4) ResourceString mixin and a resource named resourcetest exist:
+     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+  
+
+  5) Translation mixin a resource named resourcetest exist:
+     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+  
+
+  6) TranslationString mixin a resource named resourcetest exist:
+     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+  
+
+  7) TranslationString mixin should be able to update a specific translation string list for english:
+     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+  
 
 
-=============================== Coverage summary ===============================
-Statements   : 100% ( 297/297 ), 6 ignored
-Branches     : 100% ( 30/30 ), 8 ignored
-Functions    : 100% ( 45/45 )
-Lines        : 100% ( 251/251 )
-================================================================================
+

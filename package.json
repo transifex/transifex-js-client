@@ -5,7 +5,6 @@
   "main": "dist/transifex-api.min.js",
   "scripts": {
     "testmin": "python -m SimpleHTTPServer 9000",
-    "precommit": "npm run coverage && npm run build && git add dist/transifex-api.min.js && git add coverage.txt",
     "build": "rimraf dist && webpack",
     "coverage": "rm coverage.txt && rimraf coverage && node_modules/babel-cli/bin/babel-node.js node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report text --report text-summary >> coverage.txt -- -R min",
     "coverage-html": "rimraf coverage && node_modules/babel-cli/bin/babel-node.js node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report html -- -R min",
@@ -58,6 +57,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "object-assign": "^4.1.0",
     "promise": "^7.1.1",
     "superagent": "^1.8.3",
     "superagent-prefix": "0.0.2",
