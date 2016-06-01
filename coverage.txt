@@ -3,34 +3,26 @@
     translators: [],
     reviewers: [] } ]
 
-  36 passing (41s)
-  7 failing
+  38 passing (40s)
+  5 failing
 
-  1) Language mixin Given that a project named autotest exists:
+  1) Resource mixin should be able to upload a resource to the project:
      Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
   
 
-  2) Language mixin should be able to add the english target language:
+  2) ResourceString mixin and a resource named resourcetest exist:
      Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
   
 
-  3) Resource mixin should be able to upload a resource to the project:
+  3) Translation mixin a resource named resourcetest exist:
      Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
   
 
-  4) ResourceString mixin and a resource named resourcetest exist:
+  4) TranslationString mixin a resource named resourcetest exist:
      Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
   
 
-  5) Translation mixin a resource named resourcetest exist:
-     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
-  
-
-  6) TranslationString mixin a resource named resourcetest exist:
-     Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
-  
-
-  7) TranslationString mixin should be able to update a specific translation string list for english:
+  5) TranslationString mixin should be able to update a specific translation string list for english:
      Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
   
 
