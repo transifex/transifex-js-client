@@ -32,11 +32,10 @@ var txApi = TransifexApi.connect(username, password);
 Install dependencies: `npm install`
 
 - `npm run build` - Build task that generates both minified and non-minified scripts;
-- `npm run test-server` - Run Mocha tests once;
+- `npm run test-node` - Run Mocha tests once server side;
 - `npm run test-browser` - Run Mocha tests in the browser using Karma once;
-- `npm run test` - Shortcut for `npm run test-server && npm run test-browser`;
+- `npm run test` - Shortcut for `npm run test-node && npm run test-browser`;
 - `npm run tdd` - Run Mocha tests & watch files for changes;
-- `npm run tdd-browser` - Run Karma (w/ Mocha) tests & watch files for changes;
 - `npm run coverage` - Run Isparta, a code coverage tool;
 
 [travis-url]: https://travis-ci.org/alexpsi/transifex-api
