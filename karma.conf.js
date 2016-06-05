@@ -4,9 +4,9 @@ module.exports = function(config) {
     files: [
       // Each file acts as entry point for the webpack configuration
       './node_modules/phantomjs-polyfill/bind-polyfill.js',
-      'test/**/*.js'
+      'test/**/*.spek.js'
     ],
-    frameworks: ['mocha', 'chai'],
+    frameworks: ['mocha', 'chai-as-promised', 'chai'],
     preprocessors: {
       'test/**/*.js': ['webpack']
     },
@@ -24,6 +24,7 @@ module.exports = function(config) {
       require('karma-chai'),
       require('karma-phantomjs-launcher'),
       require('karma-chrome-launcher'),
+      require('karma-chai-as-promised'),
       require('karma-spec-reporter')
     ],
     reporters: ['spec'],
