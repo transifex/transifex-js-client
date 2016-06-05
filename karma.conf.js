@@ -28,5 +28,10 @@ module.exports = function(config) {
       require('karma-spec-reporter')
     ],
     reporters: ['spec'],
+    client: {
+      mocha: {
+        timeout: 6000
+      }
+    }
   });
 };

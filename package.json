@@ -11,7 +11,7 @@
     "test-node": "mocha  --recursive --bail --require babel-core/register -t 6000 --reporter spec mocha.config.js tests/*.js",
     "test-browser": "karma start --single-run",
     "tdd-browser": "karma start",
-    "jsdoc": "node_modules/jsdoc/jsdoc.js -r src/ -d docs --readme readme.md"
+    "jsdoc": "node_modules/jsdoc/jsdoc.js -r src/ -d docs --readme readme.md && open docs/index.html"
   },
   "repository": "transifex/transifex-api",
   "keywords": [],
