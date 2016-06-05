@@ -6,9 +6,9 @@
   "scripts": {
     "testmin": "python -m SimpleHTTPServer 9000",
     "build": "rimraf dist && webpack",
-    "coverage-html": "rimraf coverage && node_modules/babel-cli/bin/babel-node.js node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report html -- mocha.config.js tests/*.js",
-    "test": "npm run test-server && npm run test-browser",
-    "test-node": "mocha  --recursive --bail --require babel-core/register --ui tdd --reporter spec mocha.config.js tests/*.js",
+    "coverage": "rimraf coverage && node_modules/babel-cli/bin/babel-node.js node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report html -- -t 6000 mocha.config.js tests/*.js && open coverage/index.html",
+    "test": "npm run test-node && npm run test-browser",
+    "test-node": "mocha  --recursive --bail --require babel-core/register -t 6000 --reporter spec mocha.config.js tests/*.js",
     "test-browser": "karma start --single-run",
     "tdd-browser": "karma start",
     "jsdoc": "node_modules/jsdoc/jsdoc.js -r src/ -d docs --readme readme.md"

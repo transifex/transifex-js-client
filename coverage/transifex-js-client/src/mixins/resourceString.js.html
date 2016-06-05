@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">33.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/9</span>
+        <span class='fraction'>9/9</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/2</span>
+        <span class='fraction'>2/2</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">14.29% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/7</span>
+        <span class='fraction'>7/7</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -113,16 +113,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -137,12 +133,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,7 +155,7 @@
  * @module mixins/project
  */
 &nbsp;
-export default <span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" >{</span></span>
+export default {
 &nbsp;
   /**
    * Retrieve the details of a specific source string
@@ -166,12 +166,12 @@ export default <span class="fstat-no" title="function not covered" ><span class=
   **/
 &nbsp;
   resourceStringRead(project_slug, resource_slug, source_string) {
-<span class="cstat-no" title="statement not covered" >    s</span>ource_string = this.strToHash(source_string);
-<span class="cstat-no" title="statement not covered" >    v</span>ar path = this.urls['resourceString']
+    source_string = this.strToHash(source_string);
+    var path = this.urls['resourceString']
       .replace('&lt;project_slug&gt;', project_slug)
       .replace('&lt;resource_slug&gt;', resource_slug)
       .replace('&lt;string_hash&gt;', source_string);
-<span class="cstat-no" title="statement not covered" >    r</span>eturn this.request
+    return this.request
       .get(path)
       .auth(this.username, this.password)
       .end()
@@ -190,12 +190,12 @@ export default <span class="fstat-no" title="function not covered" ><span class=
   **/
   
   resourceStringUpdate(project_slug, resource_slug, source_string, form) {
-<span class="cstat-no" title="statement not covered" >    s</span>ource_string = this.strToHash(source_string);
-<span class="cstat-no" title="statement not covered" >    v</span>ar path = this.urls['resourceString']
+    source_string = this.strToHash(source_string);
+    var path = this.urls['resourceString']
       .replace('&lt;project_slug&gt;', project_slug)
       .replace('&lt;resource_slug&gt;', resource_slug)
       .replace('&lt;string_hash&gt;', source_string);
-<span class="cstat-no" title="statement not covered" >    r</span>eturn this.request
+    return this.request
       .put(path)
       .auth(this.username, this.password)
       .send(form)
@@ -208,7 +208,7 @@ export default <span class="fstat-no" title="function not covered" ><span class=
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 05 2016 22:50:46 GMT+0300 (EEST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jun 06 2016 00:46:22 GMT+0300 (EEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

@@ -29,8 +29,8 @@ export default {
         .auth(that.username, that.password)
         .type('application/json')
         .end(function(err, res) {
-          if (err) return reject(err);
           /* istanbul ignore next */
+          if (err) return reject(err);
           if (res.body && res.body.content) {
             res.body.content = JSON.parse(res.body.content);
           }
