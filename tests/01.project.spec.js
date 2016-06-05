@@ -30,8 +30,8 @@ describe('Project mixin should', () => {
       to.eventually.have.property('body').with.length.above(0)
       //Projects list length should not equal 0 because we added a project
   });
-  
+  txApi.languageRead(slug, 'af').then(function(data) {
+    console.log(data);
+  })
+
 });
-
-
-//

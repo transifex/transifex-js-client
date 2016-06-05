@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">23.08% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>3/13</span>
+        <span class='fraction'>13/13</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/5</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">9.09% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/11</span>
+        <span class='fraction'>11/11</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -161,9 +161,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -183,9 +183,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -200,10 +200,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -224,10 +224,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -242,10 +242,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -256,7 +256,7 @@
  * a project.
  * @module mixins/language
  */
-export default <span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" >{</span></span></span></span></span>
+export default {
 &nbsp;
   /**
    * Retrieve the target languages of the project.
@@ -265,9 +265,9 @@ export default <span class="fstat-no" title="function not covered" ><span class=
   **/
 &nbsp;
   languages(project_slug) {
-<span class="cstat-no" title="statement not covered" >    v</span>ar path = this.urls['languages']
+    var path = this.urls['languages']
       .replace('&lt;project_slug&gt;', project_slug)
-<span class="cstat-no" title="statement not covered" >    r</span>eturn this.request
+    return this.request
       .get(path)
       .auth(this.username, this.password)
       .end()
@@ -287,9 +287,9 @@ export default <span class="fstat-no" title="function not covered" ><span class=
   **/
 &nbsp;
   languageCreate(project_slug, form) {
-<span class="cstat-no" title="statement not covered" >    v</span>ar path = this.urls['languages']
+    var path = this.urls['languages']
       .replace('&lt;project_slug&gt;', project_slug)
-<span class="cstat-no" title="statement not covered" >    r</span>eturn this.request
+    return this.request
       .post(path)
       .auth(this.username, this.password)
       .send(form)
@@ -304,10 +304,10 @@ export default <span class="fstat-no" title="function not covered" ><span class=
   **/
 &nbsp;
   languageRead(project_slug, language_code) {
-<span class="cstat-no" title="statement not covered" >    v</span>ar path = this.urls['language']
+    var path = this.urls['language']
       .replace('&lt;project_slug&gt;', project_slug)
       .replace('&lt;language_code&gt;', language_code)
-<span class="cstat-no" title="statement not covered" >    r</span>eturn this.request
+    return this.request
       .get(path)
       .auth(this.username, this.password)
       .end()
@@ -328,10 +328,10 @@ export default <span class="fstat-no" title="function not covered" ><span class=
   **/
 &nbsp;
   languageUpdate(project_slug, language_code, form) {
-<span class="cstat-no" title="statement not covered" >    v</span>ar path = this.urls['language']
+    var path = this.urls['language']
       .replace('&lt;project_slug&gt;', project_slug)
       .replace('&lt;language_code&gt;', language_code);
-<span class="cstat-no" title="statement not covered" >    r</span>eturn this.request
+    return this.request
       .put(path)
       .auth(this.username, this.password)
       .send(form)
@@ -346,10 +346,10 @@ export default <span class="fstat-no" title="function not covered" ><span class=
   **/
 &nbsp;
   languageDelete(project_slug, language_code) {
-<span class="cstat-no" title="statement not covered" >    v</span>ar path = this.urls['language']
+    var path = this.urls['language']
       .replace('&lt;project_slug&gt;', project_slug)
       .replace('&lt;language_code&gt;', language_code);
-<span class="cstat-no" title="statement not covered" >    r</span>eturn this.request
+    return this.request
       .del(path)
       .auth(this.username, this.password)
       .end()
@@ -361,7 +361,7 @@ export default <span class="fstat-no" title="function not covered" ><span class=
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 05 2016 18:24:25 GMT+0300 (EEST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sun Jun 05 2016 22:50:46 GMT+0300 (EEST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>
