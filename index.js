@@ -1,5 +1,10 @@
 var axios = require('axios');
 var extend = require('extend');
+var md5 = require('md5');
+
+var strToHash = function(source_string) {
+  return md5(unescape(encodeURIComponent(source_string + ':')))
+}
 
 // Set config defaults when creating the instance
 module.exports = function(options) {
@@ -26,7 +31,12 @@ module.exports = function(options) {
   return extend({},
     require('./mixins/project.js')(axios_client, url_map),
     require('./mixins/language.js')(axios_client, url_map),
-    require('./mixins/languageInfo.js')(axios_client, url_map)
+    require('./mixins/languageInfo.js')(axios_client, url_map),
+    require('./mixins/resource.js')(axios_client, url_map, strToHash),
+    require('./mixins/resourceString.js')(axios_client, url_map, strToHash),
+    require('./mixins/translation.js')(axios_client, url_map),
+    require('./mixins/translationString.js')(axios_client, url_map, strToHash),
+    require('./mixins/stat.js')(axios_client, url_map)
   )
 
 
