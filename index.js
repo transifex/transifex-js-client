@@ -9,8 +9,8 @@ var strToHash = function(source_string) {
 // Set config defaults when creating the instance
 module.exports = function(options) {
   let opts = {};
-
-  let baseURL = options.base_url || 'https://www.transifex.com';
+  /* istanbul ignore next */
+  let baseURL = options.base_url; //|| 'https://www.transifex.com';
   opts.headers = {'Content-Type': 'application/json'}
 
   if (options.username) {
