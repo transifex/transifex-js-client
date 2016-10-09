@@ -1,0 +1,30 @@
+{
+  "name": "tx-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.14.0",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.2",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "mocha": "^3.1.0",
+    "shortid": "^2.2.6"
+  },
+  "scripts": {
+    "build": "rimraf dist && webpack",
+    "coverage": "rimraf coverage && node_modules/babel-cli/bin/babel-node.js node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha --report html -- -t 6000 mocha.config.js tests/*.js && open coverage/index.html",
+    "test": "npm run test-node && npm run test-browser",
+    "test-node": "mocha  --recursive --bail  -t 6000 --reporter spec mocha.config.js tests/*.js",
+    "test-browser": "karma start --single-run",
+    "tdd": "karma start",
+    "jsdoc": "node_modules/jsdoc/jsdoc.js -r src/ -d docs --readme readme.md && open docs/index.html"
+  },
+  "author": "alex@transifex.com",
+  "license": "ISC"
+}

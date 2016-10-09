@@ -1,4 +1,4 @@
-/**
+ /**
  * The project mixin is responsible creating, retrieving and updating TransifexApi
  * projects.
  * @module mixins/project
@@ -12,8 +12,7 @@ module.exports = (axios, urls) => ({
   **/
   projects() {
     var path = urls['projects'];
-    return axios
-      .get(path)
+    return axios.get(path)
   },
 
   /**
@@ -31,8 +30,10 @@ module.exports = (axios, urls) => ({
 
   projectCreate(form) {
     var path = urls['projects'];
-    return axios
-      .post(path, form)
+    return axios.post(
+      path,
+      form
+    )
   },
 
   /**
