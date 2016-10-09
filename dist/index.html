@@ -12,7 +12,7 @@
 <body>
   <script src="transifex-api.min.js"></script>
   <script>
-    var slug = 'asd3'
+    var slug = 'projectHJZN8OD0'
     var txApi = TransifexApi({
       username: 'alexapi1',
       password: 'alexapi1',
@@ -25,15 +25,23 @@
       description: 'this is an automated test',
       source_language_code: 'af'
     }
+    /*
     window.txV1 = txv1.connect({
       tx_user: 'alexapi1',
       tx_pass: 'alexapi1',
       tx_base_url: 'http://tx.loc:8000/',
     });
     txV1.projectCreate(payload).then(console.log, console.log)
+    */
 
+    txApi.languageUpdate(slug, 'en', {
+      list: 'mylist@listserver.com',
+      coordinators: [
+        'alexapi1'
+      ]
+    }).then(console.log, console.log)
 
-    txApi.projectCreate(payload).then(console.log, console.log)
+    //txApi.projectCreate(payload).then(console.log, console.log)
 
   </script>
 

@@ -1,9 +1,5 @@
 var axios = require('axios');
-var urlMap = require('./url.js');
-var project = require('./mixins/project.js');
-
-//global.txv1 = require('transifex-js-client');
-
+var extend = require('extend');
 
 // Set config defaults when creating the instance
 module.exports = function(options) {
@@ -23,8 +19,15 @@ module.exports = function(options) {
   } else {
     throw Error('No auth provided');
   }
-
-
   let api_prefix = options.api_prefix || '/api/2';
-  return project(axios.create(opts), urlMap(baseURL + api_prefix));
+  let axios_client = axios.create(opts);
+  let url_map = require('./url.js')(baseURL + api_prefix);
+
+  return extend({},
+    require('./mixins/project.js')(axios_client, url_map),
+    require('./mixins/language.js')(axios_client, url_map),
+    require('./mixins/languageInfo.js')(axios_client, url_map)
+  )
+
+
 }
