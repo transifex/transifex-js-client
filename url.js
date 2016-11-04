@@ -6,6 +6,7 @@ module.exports = function(api) {
     resources:          `${api}/project/<project_slug>/resources`,
     resource:           `${api}/project/<project_slug>/resource/<resource_slug>`,
     resourceString:     `${api}/project/<project_slug>/resource/<resource_slug>/source/<string_hash>`,
+    resourceUpdate:     `${api}/project/<project_slug>/resource/<resource_slug>/content`,
 
     languages:          `${api}/project/<project_slug>/languages`,
     language:           `${api}/project/<project_slug>/language/<language_code>`,

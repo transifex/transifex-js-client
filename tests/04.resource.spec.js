@@ -8,7 +8,7 @@ describe('Resource mixin should', () => {
     })).to.eventually.have.property('status', 201)
   });
   it('update the resource', () => {
-    return expect(txApi.resourceUpdate(slug, 'resourcetest', {
+    return expect(txApi.resourceDetailsUpdate(slug, 'resourcetest', {
       name: 'updatedresourcetest',
     })).to.eventually.have.property('status', 200)
   });

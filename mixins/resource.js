@@ -53,22 +53,42 @@
   },
 
   /**
-   * Update an existing resource
+   * Update the details of an  existing resource
    * @param {string} project_slug - The projects slug
    * @param {string} resource_slug - The resource slug
    * @param {object} form - An object containing the resource definition
    * @example
-     txApi.resourceUpdate('autotest', 'resourcetest', {
+     txApi.resourceDetailsUpdate('autotest', 'resourcetest', {
        name: 'updatedresourcetest',
      })
   **/
 
-  resourceUpdate(project_slug, resource_slug, form) {
+  resourceDetailsUpdate(project_slug, resource_slug, form) {
     var path = urls['resource']
       .replace('<project_slug>', project_slug)
       .replace('<resource_slug>', resource_slug);
     return axios.put(path, form)
   },
+
+  /**
+   * Update the resource strings of an  existing resource
+   * @param {string} project_slug - The projects slug
+   * @param {string} resource_slug - The resource slug
+   * @param {object} form - An object containing the resource definition
+   * @example
+     txApi.resourceStringsUpdate('autotest', 'resourcetest', {
+       name: 'updatedresourcetest',
+     })
+  **/
+
+  resourceSourceStringsUpdate(project_slug, resource_slug, form) {
+    var path = urls['resourceUpdate']
+      .replace('<project_slug>', project_slug)
+      .replace('<resource_slug>', resource_slug);
+    return axios.put(path, form)
+  },
+
+
 
   /**
    * Delete an existing resource
