@@ -13,7 +13,7 @@ describe('Resource mixin should', () => {
     })).to.eventually.have.property('status', 200)
   });
   it('retrieve the updated resource', () => {
-    return expect(txApi.resourceRead(slug, 'resourcetest'))
+    return expect(txApi.resource(slug, 'resourcetest'))
       .to.eventually.have.deep.property('data.name', 'updatedresourcetest')
   });
   it('and retrieve all resources', () => {

@@ -7,7 +7,7 @@
   "env": {
     "test": {
       "plugins": [
-        ["__coverage__", {"ignore": "*.+(test|stub).*"}]
+        ["__coverage__", {"ignore": "*.+(spec|stub).*"}]
       ]
     }
   }

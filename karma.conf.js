@@ -9,7 +9,7 @@ module.exports = config => {
   config.set({
     basePath: '',
     browsers: ['PhantomJS'],
-    frameworks: ['es6-shim', 'mocha', 'chai'],
+    frameworks: ['mocha', 'chai'],
     files: [
       testGlob,
       srcGlob
@@ -44,7 +44,7 @@ module.exports = config => {
     envPreprocessor: [
       'username',
       'password',
-      'hostname',
+      'tx_host',
       'COVERALLS_SERVICE_NAME',
       'COVERALLS_REPO_TOKEN'
     ],

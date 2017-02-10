@@ -38,7 +38,7 @@ module.exports = (axios, urls) => ({
    * @example txApi.projectRead('test_project').then(function(data) {})
   **/
 
-  projectRead(project_slug) {
+  project(project_slug) {
     var path = urls['project'].replace('<project_slug>', project_slug);
     return axios.get(path);
   },
