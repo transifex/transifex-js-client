@@ -29,6 +29,12 @@ direnv allow
 yarn test
 ```
 
+## Purpose
+
+
 ## LICENSE
 
 MIT
+
+[license-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
+[license]: https://github.com/transifex/transifex-js-client/blob/master/LICENSE
