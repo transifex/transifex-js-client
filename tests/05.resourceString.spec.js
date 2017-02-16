@@ -5,7 +5,7 @@ describe('ResourceString mixin should', () => {
     })).to.eventually.have.property('status', 200)
   });
   it('retrieve the updated source string', () => {
-    return expect(txApi.resourceStringRead(slug, 'resourcetest', 'hello world'))
+    return expect(txApi.resourceString(slug, 'resourcetest', 'hello world'))
       .to.eventually.have.deep.property('data.comment', 'This is a comment')
   });
 });

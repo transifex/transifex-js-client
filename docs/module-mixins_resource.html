@@ -38,7 +38,7 @@
     <div class="container-overview">
     
         
-            <div class="description">The resource mixin is responsible for adding, retrieving and updating resources
+            <div class="description">The resource mixin is responsible for adding, retrieving and updating
 from an existing project.</div>
         
 
@@ -132,6 +132,165 @@ from an existing project.</div>
 
     
         <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="~resource"><span class="type-signature">(inner) </span>resource<span class="signature">(project_slug, resource_slug)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Retrieve the details of a project's resource
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>project_slug</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The projects slug</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resource_slug</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The resource slug</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="resource.js.html">resource.js</a>, <a href="resource.js.html#line47">line 47</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>txApi.resource('autotest', 'resourcetest')</code></pre>
+
+
 
         
             
@@ -425,7 +584,7 @@ from an existing project.</div>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="resource.js.html">resource.js</a>, <a href="resource.js.html#line81">line 81</a>
+        <a href="resource.js.html">resource.js</a>, <a href="resource.js.html#line99">line 99</a>
     </li></ul></dd>
     
 
@@ -461,309 +620,14 @@ from an existing project.</div>
 
     
 
-    <h4 class="name" id="~resourceRead"><span class="type-signature">(inner) </span>resourceRead<span class="signature">(project_slug, resource_slug)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="~resourceDetailsUpdate"><span class="type-signature">(inner) </span>resourceDetailsUpdate<span class="signature">(project_slug, resource_slug, form)</span><span class="type-signature"></span></h4>
 
     
 
 
 
 <div class="description">
-    Retrieve the details of a project's resource
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>project_slug</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The projects slug</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>resource_slug</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The resource slug</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="resource.js.html">resource.js</a>, <a href="resource.js.html#line47">line 47</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>txApi.resourceRead('autotest', 'resourcetest')</code></pre>
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="~resources"><span class="type-signature">(inner) </span>resources<span class="signature">(project_slug)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    Retrieve the resources of the specified project.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>project_slug</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The projects slug</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="resource.js.html">resource.js</a>, <a href="resource.js.html#line15">line 15</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>txApi.resources().then(function(data) {})</code></pre>
-
-
-
-        
-            
-
-    
-
-    <h4 class="name" id="~resourceUpdate"><span class="type-signature">(inner) </span>resourceUpdate<span class="signature">(project_slug, resource_slug, form)</span><span class="type-signature"></span></h4>
-
-    
-
-
-
-<div class="description">
-    Update an existing resource
+    Update the details of an  existing resource
 </div>
 
 
@@ -929,7 +793,327 @@ from an existing project.</div>
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>txApi.resourceUpdate('autotest', 'resourcetest', {
+    <pre class="prettyprint"><code>txApi.resourceDetailsUpdate('autotest', 'resourcetest', {
+       name: 'updatedresourcetest',
+     })</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~resources"><span class="type-signature">(inner) </span>resources<span class="signature">(project_slug)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Retrieve the resources of the specified project.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>project_slug</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The projects slug</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="resource.js.html">resource.js</a>, <a href="resource.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>txApi.resources().then(function(data) {})</code></pre>
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="~resourceSourceStringsUpdate"><span class="type-signature">(inner) </span>resourceSourceStringsUpdate<span class="signature">(project_slug, resource_slug, form)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Update the resource strings of an  existing resource
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>project_slug</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The projects slug</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resource_slug</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The resource slug</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>form</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An object containing the resource definition</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="resource.js.html">resource.js</a>, <a href="resource.js.html#line84">line 84</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>txApi.resourceStringsUpdate('autotest', 'resourcetest', {
        name: 'updatedresourcetest',
      })</code></pre>
 
@@ -957,7 +1141,7 @@ from an existing project.</div>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.2</a> on Tue Oct 11 2016 16:47:49 GMT+0300 (EEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Feb 16 2017 17:21:25 GMT+0200 (EET)
 </footer>
 
 <script> prettyPrint(); </script>
