@@ -1,12 +1,11 @@
 /* eslint no-console:"off" */
 const {resolve} = require('path');
 const webpack = require('webpack');
-const webpackValidator = require('webpack-validator');
 const {getIfUtils, removeEmpty} = require('webpack-config-utils');
 
 module.exports = env => {
   const {ifProd, ifNotProd} = getIfUtils(env);
-  const config = webpackValidator({
+  const config = {
     context: resolve('src'),
     entry: {
       app: './index.js',
@@ -30,7 +29,7 @@ module.exports = env => {
         },
       })
     ]),
-  });
+  }
   if (env.debug) {
     console.log(config);
     debugger // eslint-disable-line
