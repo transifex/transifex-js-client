@@ -7,13 +7,49 @@
 ## Installation
 
 ```
-  yarn
+  npm install or yarn
+```
+
+## Documentation
+
+You can find a jsDoc describing all commands and parameters of the client at http://transifex.github.io/transifex-js-client/
+
+## Example usage
+
+### NodeJS or bundling systems
+
+```
+npm install transifex-js-client or yarn add transifex-js-client # not yet applicable
+```
+
+And then inside your file you could do:
+
+```
+const TransifexApi = require('transifex-js-client');
+const txApi = TransifexApi({
+  username: 'tx_username',
+  password: 'tx_password',
+});
+txApi.projects().then((data) => console.log(data.data))
+```
+
+### Browser
+
+To include transifex-js-client in a browser build you should use the transifex-api.min.js
+file found in the dist folder. You should also provide a promise polyfill if you plan
+on supporting older browsers.
+
+```
+var txApi = TransifexApi({
+  username: 'tx_username',
+  password: 'tx_password',
+});
+txApi.projects().then(function(data) { console.log(data.data); })
 ```
 
 ## Running tests
 
-In order to run the tests (which run through Karma) you need to expose credentials as environment variables. We do that with direnv.
-Create a .envrc containing:
+In order to run the tests (which run through Karma) you need to expose credentials as environment variables. We do that with direnv. Create an .envrc containing:
 
 ```
 export username=tx_username
@@ -26,11 +62,8 @@ And then
 
 ```
 direnv allow
-yarn test
+npm test or yarn test
 ```
-
-## Purpose
-
 
 ## LICENSE
 

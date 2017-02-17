@@ -15,7 +15,7 @@ const strToHash = (source_string) => md5((unescape(encodeURIComponent(source_str
 module.exports = function(options) {
   const opts = {};
   /* istanbul ignore next */
-  const baseURL = options.base_url;
+  const baseURL = options.base_url || 'https://www.transifex.com';
   opts.headers = { 'Content-Type': 'application/json' };
 
   if (options.username) {
