@@ -40,7 +40,7 @@ module.exports = (axios, urls) => ({
 
   project(project_slug) {
     var path = urls['project'].replace('<project_slug>', project_slug);
-    return axios.get(path);
+    return axios.get(path, { params: { details: true } });
   },
 
   /**

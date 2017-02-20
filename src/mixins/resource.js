@@ -45,7 +45,6 @@
   **/
 
    resource(project_slug, resource_slug) {
-    // if (!resource_slug) Promise.resolve();
      var path = urls['resource'].
       replace('<project_slug>', project_slug).
       replace('<resource_slug>', resource_slug);

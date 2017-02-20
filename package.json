@@ -1,6 +1,6 @@
 {
   "name": "transifex-js-client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Wrapper around Transifex's API on node and Browser",
   "main": "src/index.js",
   "browser": "dist/transifex-api.min.js",
@@ -54,7 +54,6 @@
   },
   "dependencies": {
     "axios": "^0.15.3",
-    "blueimp-md5": "^2.6.0",
-    "extend": "^3.0.0"
+    "blueimp-md5": "^2.6.0"
   }
 }

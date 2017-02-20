@@ -9,7 +9,7 @@ const ResourceString = require('./mixins/resourceString');
 const Translation = require('./mixins/translation');
 const TranslationString = require('./mixins/translationString');
 const Stat = require('./mixins/stat');
-const strToHash = (source_string) => md5((unescape(encodeURIComponent(source_string + ':')))); // Haskell made me do it
+const strToHash = (source_string) => md5((unescape(encodeURIComponent(source_string + ':'))));
 
 // Set config defaults when creating the instance
 module.exports = function(options) {
@@ -31,6 +31,7 @@ module.exports = function(options) {
   } else {
     throw Error('No auth provided');
   }
+  opts.auth.base_url = baseURL;
   const api_prefix = options.api_prefix || '/api/2';
   const axios_client = axios.create(opts);
   const url_map = require('./url.js')(baseURL + api_prefix);
@@ -43,6 +44,7 @@ module.exports = function(options) {
     ResourceString(axios_client, url_map, strToHash),
     Translation(axios_client, url_map),
     TranslationString(axios_client, url_map, strToHash),
-    Stat(axios_client, url_map)
+    Stat(axios_client, url_map),
+    opts.auth
   );
 };
