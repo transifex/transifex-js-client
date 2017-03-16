@@ -31,10 +31,10 @@
      })
   **/
 
-   resourceCreate(project_slug, form) {
+   resourceCreate(project_slug, form, options) {
      var path = urls['resources'].
       replace('<project_slug>', project_slug);
-     return axios.post(path, form);
+     return axios.post(path, form, options);
    },
 
   /**
@@ -49,6 +49,20 @@
       replace('<project_slug>', project_slug).
       replace('<resource_slug>', resource_slug);
      return axios.get(path);
+   },
+
+   /**
+    * Retrieves the source file of the resource
+    * @param {string} project_slug - The projects slug
+    * @param {string} resource_slug - The resource slug
+    * @example txApi.resourceFile('autotest', 'resourcetest')
+   **/
+
+   resourceFile(project_slug, resource_slug) {
+     var path = urls['resourceUpdate'].
+     replace('<project_slug>', project_slug).
+     replace('<resource_slug>', resource_slug);
+     return axios.get(path, { params: { file: true } });
    },
 
   /**

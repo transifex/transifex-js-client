@@ -15,7 +15,7 @@ const strToHash = (source_string) => md5((unescape(encodeURIComponent(source_str
 module.exports = function(options) {
   const opts = {};
   /* istanbul ignore next */
-  const baseURL = options.base_url || 'https://www.transifex.com';
+  const baseURL = options.base_url; // || 'https://www.transifex.com';
   opts.headers = { 'Content-Type': 'application/json' };
 
   if (options.username) {
@@ -36,7 +36,8 @@ module.exports = function(options) {
   const axios_client = axios.create(opts);
   const url_map = require('./url.js')(baseURL + api_prefix);
 
-  return extend({},
+  return extend(
+    { urls: url_map },
     Project(axios_client, url_map),
     Language(axios_client, url_map),
     LanguageInfo(axios_client, url_map),
