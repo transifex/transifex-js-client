@@ -1,9 +1,5 @@
 # Transifex-js-client
 
-
-[![NPM](https://nodei.co/npm/github-webhook-handler.png?downloads=true&downloadRank=true)](https://nodei.co/npm/github-webhook-handler/)
-[![NPM](https://nodei.co/npm-dl/github-webhook-handler.png?months=6&height=3)](https://nodei.co/npm/github-webhook-handler/)
-
 [![MIT License][license-badge]][LICENSE]
 [![Build Status](https://travis-ci.org/transifex/transifex-js-client.svg?branch=master)](https://travis-ci.org/transifex/transifex-js-client)
 [![Coverage Status](https://coveralls.io/repos/github/transifex/transifex-js-client/badge.svg?branch=master)](https://coveralls.io/github/transifex/transifex-js-client?branch=master)
@@ -50,6 +46,42 @@ var txApi = TransifexApi({
 });
 txApi.projects().then(function(data) { console.log(data.data); })
 ```
+
+## Commands
+
+
+Command | Arguments
+------------ | -------------
+projects                      | -
+projectCreate                 | form
+project                       | project_slug
+projectUpdate                 | project_slug, form
+projectDelete                 | project_slug
+languages                     | project_slug
+languageCreate                | project_slug, form
+language                      | project_slug, language_code
+languageUpdate                | project_slug, language_code, form
+languageDelete                | project_slug, language_code
+languagesInfo                 | -
+languageInfo                  | language_code
+resources                     | project_slug
+resourceCreate                | project_slug, form
+resource                      | project_slug, resource_slug
+resourceFile                  | project_slug, resource_slug
+resourceDetailsUpdate         | project_slug, resource_slug, form
+resourceSourceStringsUpdate   | project_slug, resource_slug, form
+resourceDelete                | project_slug, resource_slug
+resourceString                | project_slug, resource_slug, hash
+resourceStringUpdate          | project_slug, resource_slug, hash, form
+translation                   | project_slug, resource_slug, language_code
+translationFile               | project_slug, resource_slug, language_code
+translationUpdate             | project_slug, resource_slug, language_code, form
+translationStrings            | project_slug, resource_slug, language_code
+translationString             | project_slug, resource_slug, language_code, hash
+translationStringUpdate       | project_slug, resource_slug, language_code, hash
+stat                          | project_slug, resource_slug, language_code
+stats                         | project_slug, resource_slug
+
 
 ## Running tests
 
